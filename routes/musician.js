@@ -31,6 +31,12 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// retrieve all musicians from data store
+router.get('/all', (req, res) => {
+    res.status('200').send("200-ok status");
+  });
+});
+
 // modify existing musician or add a new one to the data store
 router.put('/:id', jsonParser, async (req, res) => {
   try {
